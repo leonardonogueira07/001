@@ -1,0 +1,93 @@
+/*Gerais*/
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+/*Container de Navegação*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+.container-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+    background-color: #E0E0E0;
+    padding: 0 15px;
+}
+.container img {
+    height: 50%;
+}
+.container-title {
+    font-size: 1em;
+}
+/*Menu*/
+.navegacao {
+    display: none;
+}
+.navegacao ul {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 75%;
+    background-color: #333333;   
+    list-style-type: none; 
+}
+.navegacao ul li {
+    padding: 10px 0px;    
+    line-height: 19px;
+}
+.navegacao ul li.close {
+    text-align: right;
+    font-size: 16px;
+}
+.navegacao ul li a {
+    color: #c4c4c4;
+    text-decoration: none;
+}
+.navegacao ul li a:hover {
+    background-color: #c4c4c4;
+    cursor: pointer;
+}
+
+
+/*Conteudo */
+.conteudo {
+    margin: 20px;
+}
+/*Formulario */
+.formulario {
+    border: 1px solid;    
+    margin: 10px;
+    padding: 10px;
+}
+.formulario-titulo {
+    text-align: center;
+}
+.selecao-form {
+    margin: 10px;
+}
+input, select {
+    height: 20px;
+    width: 240px;
+}
+.btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 75vw;
+}
+/*Extrato*/
+
+.extrato {
+    
+}
+.extrato-titulo {
+    font-weight: bolder;
+}
