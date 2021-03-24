@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="./assets/css/estyles.css">
+    <link rel="stylesheet" href="./assets/css/estyle-desk.css">
+    <!--<link rel="stylesheet" media="(max-width: 800px)" href="./assets/css/estyles.css">-->   
     <!--Fonte-->
-    <link href="https://fonts.googleapis.com/css2? display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -18,7 +19,7 @@
             <img src="./assets/img/bar-toggle.svg" class="hamburguer-img" alt="Menu">
             <nav class="navegacao hamburguer">
                 <ul class="menu">
-                    <li>X</li>
+                    <li class="x">X</li>
                     <li><a href="#">Limpar Dados</a></li>
                     <li><a href="#">Cadastro de Transações</a></li>
                     <li><a href="#">Salvar no Servidor</a></li>
@@ -30,9 +31,9 @@
     <section class="conteudo">
         <!--Formulario Nova Transação-->
         <div class="formulario">
-            <h2 class="formulario-titulo">Nova transação</h2>
+            <h2 class="conteudo-titulo">Nova transação</h2>
             <div class="selecao-form">
-                <label for="tipo">Tipo de Transação</label><br>
+                <label for="tipo">Tipo de Transação</label>
                 <select name="selecao">
                     <option value="valor1">Compra</option>
                     <option value="valor2">Venda</option>
@@ -43,16 +44,16 @@
                 <input type="text" id="mercadoria" placeholder="Input">
             </div>
             <div class="selecao-form">
-                <label for="valor">Valor</label><br>
-                <input type="text" id="valor" placeholder="R$0,00"><br>
-            </div>
-            <button type="btn" class="btn">Adicionar Transação</button>
+                <label for="valor">Valor</label>
+                <input type="text" id="valor" placeholder="R$0,00"> 
+                <button type="btn" class="btn">Adicionar Transação</button>       
+            </div>                
         </div>
         <!--Extrato de Transação-->
         <div class="extrato">
-            <h2 class="estrato-titulo">Extrato de transações</h2>
+            <h2 class="conteudo-titulo">Extrato de transações</h2>
             <div class="conteudo-extrato">
-                <h4>Mercadoria</h4>
+                <h4 class="mercadoria">Mercadoria</h4>
                 <h4>Valor</h4>
             </div>
             <div class="linha-extrato">
@@ -77,12 +78,13 @@
                 <span>R$ 9,99</span>
             </div>
             <div class="tot-valor">
-                <h3>Valor</h3>
-                <h3>R$12.909,99</h3>
-                <span>[LUCRO]</span>
+                <h3>Total</h3>
+                <div class="resultado">
+                    <h3>R$ 12.909,99</h3>
+                    <span>[LUCRO]</span>
+                </div>
             </div>
         </div>        
-    </section>
-    
+    </section>    
 </body>
 </html>

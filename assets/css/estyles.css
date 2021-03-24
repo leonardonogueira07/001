@@ -1,4 +1,5 @@
 /*Gerais*/
+
 body {
     font-family: 'Lato', sans-serif;
     padding: 0;
@@ -12,7 +13,7 @@ body {
 .container-header {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 10vh;
     align-items: center;
     background-color: #E0E0E0;
@@ -57,37 +58,51 @@ body {
 
 /*Conteudo */
 .conteudo {
-    margin: 20px;
-}
-/*Formulario */
-.formulario {
-    border: 1px solid;    
-    margin: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
     padding: 10px;
 }
+/*Formulario */
 .formulario-titulo {
-    text-align: center;
+    display: none;
 }
 .selecao-form {
-    margin: 10px;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
 }
+
 input, select {
-    height: 20px;
-    width: 240px;
-}
+    height: 30px;
+    width: 100%;
+    border-radius: 5px; 
+}*
+
 .btn {
     background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
-    height: 40px;
-    width: 75vw;
+    height: 10vw;
+    width: 100%;
+    margin-top: 20px;
 }
 /*Extrato*/
 
 .extrato {
-    
+   
 }
-.extrato-titulo {
+h2.estrato-titulo {
+    text-align: center;
     font-weight: bolder;
+}
+
+.conteudo-extrato, .linha-extrato{
+    display: flex;
+    justify-content: space-between; 
+}
+.linha-ext {
+    font-size: 15px;
+    padding: 10px;
 }
