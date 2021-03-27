@@ -31,53 +31,55 @@
     <section class="conteudo">
         <!--Formulario Nova Transação-->
         <div class="formulario">
-            <h2 class="conteudo-titulo">Nova transação</h2>
-            <div class="selecao-form">
-                <label for="tipo">Tipo de Transação</label>
-                <select name="selecao">
-                    <option value="valor1">Compra</option>
-                    <option value="valor2">Venda</option>
-                </select>
-            </div>
-            <div class="selecao-form">
-                <label for="mercadoria">Nome da Mercadoria</label>
-                <input type="text" id="mercadoria" placeholder="Input">
-            </div>
-            <div class="selecao-form">
-                <label for="valor">Valor</label>
-                <input type="text" id="valor" placeholder="R$0,00"> 
-                <button type="btn" class="btn">Adicionar Transação</button>       
-            </div>                
+            <h2 class="conteudo-titulo form-titulo">Nova transação</h2>
+            <div class="form">
+                <div class="selecao-form">
+                    <label for="tipo">Tipo de Transação</label>
+                    <select name="selecao">
+                        <option value="valor1">Compra</option>
+                        <option value="valor2">Venda</option>
+                    </select>
+                </div>
+                <div class="selecao-form">
+                    <label for="mercadoria">Nome da Mercadoria</label>
+                    <input type="text" id="mercadoria" placeholder="Input">
+                </div>
+                <div class="selecao-form">
+                    <label for="valor">Valor</label>
+                    <input type="text" id="valor" placeholder="R$0,00"> 
+                    <button type="btn" class="btn">Adicionar Transação</button>       
+                </div> 
+            </div>                           
         </div>
         <!--Extrato de Transação-->
         <div class="extrato">
             <h2 class="conteudo-titulo">Extrato de transações</h2>
-            <div class="conteudo-extrato">
+            <div class="descricao-extrato">
                 <h4 class="mercadoria">Mercadoria</h4>
                 <h4>Valor</h4>
             </div>
             <div class="linha-extrato">
-                <div class="linha-ext">
+                <div class="linha-nome">
                     <span class="sinal">+</span>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                    <span>Lorem ipsum dolor sit amet <br>consectetur</span>
                 </div>
                 <span>R$ 12.999,99</span>
             </div>
             <div class="linha-extrato">
-                <div class="linha-ext">
+                <div class="linha-nome">
                     <span class="sinal">-</span>
                     <span>Quis nostrud exercitation</span>
                 </div>
                 <span>R$ 99,99</span>
             </div>
             <div class="linha-extrato">
-                <div class="linha-ext">
+                <div class="linha-nome">
                     <span class="sinal">+</span>
                     <span>Lorem ipsum</span>
                 </div>
                 <span>R$ 9,99</span>
             </div>
-            <div class="tot-valor">
+            <div class="total-valor">
                 <h3>Total</h3>
                 <div class="resultado">
                     <h3>R$ 12.909,99</h3>
