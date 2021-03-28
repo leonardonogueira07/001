@@ -55,7 +55,7 @@ nav.navegacao.hamburguer {
 }
 .navegacao ul li a:hover {
     cursor: pointer;
-    color: black;
+    color: black;   
 }
 
 /*Conteudo */
@@ -86,8 +86,7 @@ nav.navegacao.hamburguer {
 input, select {
     padding: 0.7em;
     border: 1px solid #979797;
-    border-radius: 5px;
-    font-size: 1.0em;
+    border-radius: 5px;  
 }
 .btn {
     background-color: black;
@@ -135,7 +134,7 @@ input, select {
     .hamburguer-img {
         display: flex;
     }
-    /*Menu*/.navegacao {display: none;}
+    /*Menu*/
     .navegacao ul {
         display: flex;
         flex-direction: column;
@@ -184,9 +183,6 @@ input, select {
         flex-direction: column;        
         width: 90%;        
     }
-    input, select {
-        font-size: 1em;
-    }
     .form {  
         display: flex;
         flex-flow: row wrap;
@@ -205,7 +201,7 @@ input, select {
     
 }
 /*======================Mobile======================*/
-@media (max-width: 695px) {
+@media (max-width: 500px) {
 
     /*Menu*/
     .navegacao ul {
@@ -225,8 +221,7 @@ input, select {
     }
     .extrato {
         border-top: 1px solid #979797;
-    }
-    
+    } 
     
 }
 @media (max-width: 350px) {
