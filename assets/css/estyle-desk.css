@@ -134,7 +134,7 @@ input, select {
     .hamburguer-img {
         display: flex;
     }
-    /*Menu*/
+    /*Menu*/.navegacao {display: none;}
     .navegacao ul {
         display: flex;
         flex-direction: column;
@@ -181,7 +181,7 @@ input, select {
     .formulario {
         display: flex;
         flex-direction: column;        
-        width: 90%;        
+        width: 95%;        
     }
     .form {  
         display: flex;
@@ -195,13 +195,13 @@ input, select {
     .extrato {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 95%;
         margin: auto;
     }     
     
 }
 /*======================Mobile======================*/
-@media (max-width: 500px) {
+@media (max-width: 590px) {
 
     /*Menu*/
     .navegacao ul {
