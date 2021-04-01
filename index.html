@@ -10,21 +10,30 @@
     <!--<link rel="stylesheet" media="(max-width: 800px)" href="./assets/css/estyles.css">-->   
     <!--Fonte-->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!--Script-->
+    <script src="./assets/js/script.js" defer></script> 
 </head>
 <body>
     <div class="container">
         <div class="container-header">
             <img src="./assets/img/Ellipse 13.png" class="logo" alt="Controle Financeiro">
                 <h2 class="container-title">Controle Financeiro</h2>
-            <img src="./assets/img/bar-toggle.svg" class="hamburguer-img" alt="Menu">
-            <nav class="navegacao hamburguer">
+            <img src="./assets/img/bar-toggle.svg" class="hamburguer-img" alt="Menu" id="btn-div"">
+            <nav class="navegacao hamburguer" id="nav">
                 <ul class="menu">
-                    <li href="#" class="x">X</li>
                     <li><a href="#limpar">Limpar Dados</a></li>
                     <li><a href="#cadastro">Cadastro de Transações</a></li>
-                    <li><a href="#salvar">Salvar no Servidor</a></li>
-                </ul>
+                    <li><a href="#salvar">Salvar no Sevidor</a></li>
+                </ul>                
             </nav>
+            <div id="nav" class="sidenav" id="btn-man">
+                <ul>
+                    <li href="#" class="x" id="btn-man">X</li>
+                    <li><a href="#limpar">Limpar Dados</a></li>
+                    <li><a href="#cadastro">Cadastro de Transações</a></li>
+                    <li><a href="#salvar">Salvar no Sevidor</a></li>
+                </ul>                
+            </div>
         </div>
     </div>
     <!--Seção dos conteúdos-->
@@ -35,19 +44,19 @@
             <div class="form">
                 <div class="selecao-form">
                     <label for="tipo">Tipo de Transação</label>
-                    <select name="selecao">
+                    <select name="nameSelecao" id="selecao">
                         <option value="valor1">Compra</option>
                         <option value="valor2">Venda</option>
                     </select>
                 </div>
                 <div class="selecao-form">
                     <label for="mercadoria">Nome da Mercadoria</label>
-                    <input type="text" id="mercadoria" placeholder="Input">
+                    <input type="text" name="nameMercadoria" id="mercadoria" placeholder="Input">
                 </div>
                 <div class="selecao-form">
                     <label for="valor">Valor</label>
-                    <input type="text" id="valor" placeholder="R$0,00"> 
-                    <button type="btn" class="btn">Adicionar Transação</button>       
+                    <input type="text" name="nameValor" id="valor" placeholder="R$0,00"> 
+                    <button type="btn" class="btn" onclick="transac()">Adicionar Transação</button>       
                 </div> 
             </div>                           
         </div>
@@ -87,6 +96,7 @@
                 </div>
             </div>
         </div>        
-    </section>    
+    </section> 
+    
 </body>
 </html>
