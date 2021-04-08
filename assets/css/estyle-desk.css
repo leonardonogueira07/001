@@ -1,4 +1,4 @@
-/*Gerais*/
+/*===============Gerais===============*/
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +6,7 @@
 body {
     font-family: Lato, sans-serif;    
 }
-/*Container de Navegação*/
+/*===============Container de Navegação===============*/
 .container-header {
     width: 100%;
     display: flex;
@@ -24,7 +24,7 @@ body {
 .container-title {
     font-size: 1em;
 }
-/*Menu*/
+/*===============Menu===============*/
 nav.navegacao.hamburguer {
     background-color: white;
     border-radius: 2px;
@@ -58,7 +58,7 @@ nav.navegacao.hamburguer {
     display: none;
 }
 
-/*Conteudo */
+/*===============Conteudo===============*/
 .conteudo {
     display: flex;  
     justify-content: space-evenly;
@@ -70,7 +70,7 @@ nav.navegacao.hamburguer {
     margin: 20px;
     font-size: 1.1em;
 }
-/*Formulario */
+/*===============Formulario===============*/
 .formulario {
     border: 1px solid #979797;
     display: flex;
@@ -98,7 +98,7 @@ input, select {
     margin-top: 20px;
 }
 
-/*Extrato */
+/*===============Extrato===============*/
 .extrato {
     display: flex;
     flex-direction: column;
@@ -126,6 +126,11 @@ input, select {
 }
 .resultado {
     text-align: right;
+}
+em {
+    color: red;    
+    font-weight: bolder;
+    text-align: center;
 }
 /*======================Responsividade======================*/
 /*======================Tablet======================*/
@@ -206,8 +211,7 @@ input, select {
         flex-direction: column;
         width: 95%;
         margin: auto;
-    }     
-    
+    }   
 }
 /*======================Mobile======================*/
 @media (max-width: 590px) {

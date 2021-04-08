@@ -41,24 +41,28 @@
         <!--Formulario Nova Transação-->
         <div class="formulario">
             <h2 class="conteudo-titulo form-titulo">Nova transação</h2>
-            <div class="form">
+            <form class="form" id="form">
                 <div class="selecao-form">
                     <label for="tipo">Tipo de Transação</label>
-                    <select name="nameSelecao" id="selecao">
+                    <select required type="select" name="select" id="selecao">
+                        <option value="valor" selected>Selecione</option>
                         <option value="valor1">Compra</option>
                         <option value="valor2">Venda</option>
                     </select>
+                    <em class="error"></em>
                 </div>
                 <div class="selecao-form">
                     <label for="mercadoria">Nome da Mercadoria</label>
-                    <input type="text" name="nameMercadoria" id="mercadoria" placeholder="Input">
+                    <input required type="text" name="nameMercadoria" id="mercadoria" placeholder="Input">
+                    <em class="error"></em>
                 </div>
                 <div class="selecao-form">
                     <label for="valor">Valor</label>
-                    <input type="text" name="nameValor" id="valor" placeholder="R$0,00"> 
-                    <button type="btn" class="btn" onclick="transac()">Adicionar Transação</button>       
+                    <input required type="number" name="nameValor" id="valor" placeholder="R$0,00">
+                    <em class="error"></em>
+                    <button type="btn" class="btn">Adicionar Transação</button>       
                 </div> 
-            </div>                           
+            </form>                           
         </div>
         <!--Extrato de Transação-->
         <div class="extrato">
@@ -70,21 +74,21 @@
             <div class="linha-extrato">
                 <div class="linha-nome">
                     <span class="sinal">+</span>
-                    <span>Lorem ipsum dolor sit amet <br>consectetur</span>
+                    <span class="primeiro">Lorem ipsum dolor sit amet <br>consectetur</span>
                 </div>
                 <span>R$ 12.999,99</span>
             </div>
             <div class="linha-extrato">
                 <div class="linha-nome">
                     <span class="sinal">-</span>
-                    <span>Quis nostrud exercitation</span>
+                    <span class="segundo">Quis nostrud exercitation</span>
                 </div>
-                <span>R$ 99,99</span>
+                <span class="segundo-val">R$ 99,99</span>
             </div>
             <div class="linha-extrato">
                 <div class="linha-nome">
                     <span class="sinal">+</span>
-                    <span>Lorem ipsum</span>
+                    <span class="terceiro">Lorem ipsum</span>
                 </div>
                 <span>R$ 9,99</span>
             </div>
