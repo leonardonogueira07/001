@@ -58,7 +58,7 @@
                 </div>
                 <div class="selecao-form">
                     <label for="valor">Valor</label>
-                    <input required type="number" name="nameValor" id="valor" placeholder="R$0,00">
+                    <input required type="text" name="valor" id="valor" onkeyup="mascaraValor(this)" placeholder="R$0,00">
                     <em class="error"></em>
                     <button type="btn" class="btn">Adicionar Transação</button>       
                 </div> 
