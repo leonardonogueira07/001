@@ -38,7 +38,7 @@ btn1.addEventListener('click', function() {
         //Message Customizada
         function customMessage(typeError) {
             const messages = {
-                select: {
+                checkbox: {
                     valueMissing: "Selecione o tipo de transacao"
                 },
                 text: {
@@ -113,17 +113,34 @@ btn1.addEventListener('click', function() {
 
 
 //EXTRATO DE TRANSAÇÕES
+    //LIMPAR DADOS DOS CAMPOS 
+    function limparDados() {
+        document.getElementById('form').reset();
+    }
     //EXTRATO DE TRANSAÇÕES
     function dados() {
         let Vselecao = document.getElementById('selecao').value;
         let Vmercadoria = document.getElementById('mercadoria').value;
         let Vvalor = document.getElementById('valor').value; 
 
-        let conteudo = {
+        if(Vmercadoria == '' || Vvalor == '') {
+            return false
+        }
+
+        let conteudo = [{
             selecao : Vselecao,
             mercadoria: Vmercadoria,
             valor : Vvalor
-        };
+        }];
+
+        let cont = JSON.parse(localStorage.getItem("Conteudo"));
+        cont.push(conteudo);
+
+        
+        localStorage.setItem("Conteudo", JSON.stringify(cont));
+        console.log(conteudo);
+
+
     }
     
 

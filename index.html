@@ -21,7 +21,7 @@
             <img src="./assets/img/bar-toggle.svg" class="hamburguer-img" alt="Menu" id="btn-div"">
             <nav class="navegacao hamburguer" id="nav">
                 <ul class="menu">
-                    <li><a href="#limpar">Limpar Dados</a></li>
+                    <li><a href="#limpar" onclick="limparDados()">Limpar Dados</a></li>
                     <li><a href="#cadastro">Cadastro de Transações</a></li>
                     <li><a href="#salvar">Salvar no Sevidor</a></li>
                 </ul>                
@@ -44,10 +44,10 @@
             <form class="form" id="form">
                 <div class="selecao-form">
                     <label for="tipo">Tipo de Transação</label>
-                    <select required type="select" name="select" id="selecao">
+                    <select required type="checkbox" name="select" id="selecao">
                         <option value="valor" selected>Selecione</option>
-                        <option value="valor1">Compra</option>
-                        <option value="valor2">Venda</option>
+                        <option value="Compra">Compra</option>
+                        <option value="Venda">Venda</option>
                     </select>
                     <em class="error"></em>
                 </div>
@@ -60,7 +60,7 @@
                     <label for="valor">Valor</label>
                     <input required type="text" name="valor" id="valor" onkeyup="mascaraValor(this)" placeholder="R$0,00">
                     <em class="error"></em>
-                    <button type="btn" class="btn">Adicionar Transação</button>       
+                    <button type="btn" class="btn" onclick="dados()" >Adicionar Transação</button>       
                 </div> 
             </form>                           
         </div>
