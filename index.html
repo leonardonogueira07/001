@@ -29,7 +29,7 @@
             <div id="nav" class="sidenav" id="btn-man">
                 <ul>
                     <li href="#" class="x" id="btn-man">X</li>
-                    <li><a href="#limpar">Limpar Dados</a></li>
+                    <li><a href="#limpar" onclick="limparDados()">Limpar Dados</a></li>
                     <li><a href="#cadastro">Cadastro de Transações</a></li>
                     <li><a href="#salvar">Salvar no Sevidor</a></li>
                 </ul>                
@@ -41,13 +41,13 @@
         <!--Formulario Nova Transação-->
         <div class="formulario">
             <h2 class="conteudo-titulo form-titulo">Nova transação</h2>
-            <form class="form" id="form">
+            <form action="" class="form" id="form" onsubmit="return false">
                 <div class="selecao-form">
                     <label for="tipo">Tipo de Transação</label>
                     <select required type="checkbox" name="select" id="selecao">
-                        <option value="valor" selected>Selecione</option>
-                        <option value="Compra">Compra</option>
-                        <option value="Venda">Venda</option>
+                        <option value="select" selected>Selecione</option>
+                        <option value="+">Compra</option>
+                        <option value="-">Venda</option>
                     </select>
                     <em class="error"></em>
                 </div>
@@ -60,41 +60,26 @@
                     <label for="valor">Valor</label>
                     <input required type="text" name="valor" id="valor" onkeyup="mascaraValor(this)" placeholder="R$0,00">
                     <em class="error"></em>
-                    <button type="btn" class="btn" onclick="dados()" >Adicionar Transação</button>       
+                    <button type="btn" class="btn" onclick="dados()">Adicionar Transação</button>       
                 </div> 
             </form>                           
         </div>
         <!--Extrato de Transação-->
-        <div class="extrato">
+        <div class="extrato" id="extrato">
             <h2 class="conteudo-titulo">Extrato de transações</h2>
             <div class="descricao-extrato">
                 <h4 class="mercadoria">Mercadoria</h4>
                 <h4>Valor</h4>
             </div>
-            <div class="linha-extrato">
-                <div class="linha-nome">
-                    <span class="sinal">+</span>
-                    <span class="primeiro">Lorem ipsum dolor sit amet <br>consectetur</span>
-                </div>
-                <span>R$ 12.999,99</span>
-            </div>
-            <div class="linha-extrato">
-                <div class="linha-nome">
-                    <span class="sinal">-</span>
-                    <span class="segundo">Quis nostrud exercitation</span>
-                </div>
-                <span class="segundo-val">R$ 99,99</span>
-            </div>
-            <div class="linha-extrato">
-                <div class="linha-nome">
-                    <span class="sinal">+</span>
-                    <span class="terceiro">Lorem ipsum</span>
-                </div>
-                <span>R$ 9,99</span>
-            </div>
+
+            <table class="tbody" id="tbody">
+                <tr class="line-tbody">
+                    <td class="text-center"></td>
+                </tr>
+            </table>            
             <div class="total-valor">
                 <h3>Total</h3>
-                <div class="resultado">
+                <div class="resultado" id="resultado">
                     <h3>R$ 12.909,99</h3>
                     <span>[LUCRO]</span>
                 </div>
@@ -104,3 +89,5 @@
     
 </body>
 </html>
+
+

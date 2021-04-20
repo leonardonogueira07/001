@@ -77,6 +77,7 @@ nav.navegacao.hamburguer {
     flex-direction: column;
     width: 35%; 
     border-radius: 5px;
+    max-height: 344px;
 }
 .selecao-form {
     display: flex;
@@ -110,12 +111,36 @@ input, select {
     padding-left: 25px;
     border-bottom: 1px solid #979797;
 }
+
+
+table{
+    border-collapse: collapse;
+}
+td{
+    border-bottom:1px solid#333333 ;
+    padding: 1px 1px;
+
+}
+.signal-left{
+    text-align: center;
+}
+.text-left{
+    text-align: start;
+}
+.text-right{
+    text-align: end;
+}
+.text-center{
+    text-align: center;
+}
+
+/*
 .linha-extrato{
     border-bottom: 1px solid #979797;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     padding: 10px;    
-}
+}*/
 .total-valor {
     display: flex;
     justify-content: space-between;
@@ -237,11 +262,7 @@ em {
     } 
     
 }
-@media (max-width: 350px) {
-    .linha-extrato {
-        font-size: 1em;
-    }
- }
+
 
 
 

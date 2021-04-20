@@ -1,5 +1,5 @@
 
-/*MENU - RESPONSIBLE*/
+/*---=========MENU - RESPONSIBLE---=========*/
 let btn = document.getElementById('btn-div');
 let btn1 = document.getElementById('btn-man');
 let container = document.querySelector('.sidenav');
@@ -18,9 +18,8 @@ btn1.addEventListener('click', function() {
         container.style.display = 'none';
     }
 }); 
-    //FORMULARIO VALIDAÇÃO = MESSAGE PERSONALIZADA
+//---=========FORMULARIO VALIDAÇÃO = MESSAGE PERSONALIZADA---=========
     const campos = document.querySelectorAll("[required]")
-
     //console.log(campos);
     function validarCampo(campo) {
         //Logica para verficar se tem erros
@@ -74,18 +73,17 @@ btn1.addEventListener('click', function() {
             }
         }
     }
-    //Validação de Campo
+    //---=========Validação de Campo---=========
     function validacao(event) {
         const campo = event.target        
-        const validation = validarCampo(campo)
-                 
+        const validation = validarCampo(campo)                 
         validation()       
     }
     for(campo of campos){
         campo.addEventListener("invalid", event => {
             //Eliminar o Bubble
             event.preventDefault()
-            validacao(event)
+            validacao(event)            
         })
         campo.addEventListener("blur", validacao)
     }
@@ -94,10 +92,10 @@ btn1.addEventListener('click', function() {
         var charCode = (evt.which) ? evt.which : Event.charCode
         if(charCode > 31 && (charCode < 48 || charCode > 57))
 
+        //return false;
         return false;
-        return true;
-
-    }//MASCARA DE NUMEROS
+    }
+    //MASCARA DE NUMEROS
     function mascaraValor(str) {
         var v = str.value.replace(/\D/g,'')
         
@@ -108,48 +106,62 @@ btn1.addEventListener('click', function() {
 
         str.value = v
     }
-
-
-
-
-//EXTRATO DE TRANSAÇÕES
-    //LIMPAR DADOS DOS CAMPOS 
-    function limparDados() {
-        document.getElementById('form').reset();
-    }
-    //EXTRATO DE TRANSAÇÕES
+//---=========EXTRATO DE TRANSAÇÕES---=========    
+    //EXTRATO DE TRANSAÇÕES       
     function dados() {
-        let Vselecao = document.getElementById('selecao').value;
-        let Vmercadoria = document.getElementById('mercadoria').value;
-        let Vvalor = document.getElementById('valor').value; 
-
-        if(Vmercadoria == '' || Vvalor == '') {
-            return false
+        var selecao = document.getElementById('selecao').value;
+        var mercadoria = document.getElementById('mercadoria').value;
+        var valor = document.getElementById('valor').value; 
+                        
+        if(selecao == 'select' || mercadoria == '' || valor == '') {
+            return false;
+        }              
+        var cont = {selecao : selecao, mercadoria: mercadoria, valor : valor}
+        var favoritos = JSON.parse(localStorage.getItem('favoritos')) || []
+                
+        favoritos.push(cont)
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));        
+        console.log(cont);             
+                               
+        document.querySelector("table").innerHTML += `  
+           <tr> 
+           <td class="signal-left">`+ cont.selecao +`</td> 
+           <td class="text-left">`+ cont.mercadoria +` </td>
+           <td class="text-right">`+ 'R$ ' +cont.valor +`</td> 
+           </tr>           
+        `        
+        var total = 0    
+        for (let index = 0; index < favoritos.length; index ++) {
+        let valorASomar = parseFloat(favoritos[index].valor.replace(/\./g,"").replace(/,/g,"."))
+        
+        console.log(valorASomar)
+        if (favoritos[index].selecao != `+`){
+            valorASomar *= -1
         }
 
-        let conteudo = [{
-            selecao : Vselecao,
-            mercadoria: Vmercadoria,
-            valor : Vvalor
-        }];
-
-        let cont = JSON.parse(localStorage.getItem("Conteudo"));
-        cont.push(conteudo);
-
-        
-        localStorage.setItem("Conteudo", JSON.stringify(cont));
-        console.log(conteudo);
-
-
+        total += valorASomar
     }
+        document.getElementById('form').reset();
+        }
+       // var resultado = cont.valor + cont.valor;
+    //    document.getElementById("resultado").innerHTML += `
+      //          <div class="resultado" id="resultado">
+       //             <h3>`+ 'R$ ' +cont.valor +`</h3>
+       //             <span>[LUCRO]</span>
+       //         </div>
+       // `
+    //LIMPAR DADOS DOS CAMPOS    
+    function limparDados() {
+        //localStorage.removeItem('favoritos');
+        //dados()  
+        document.querySelector(".form").reset() 
+    }
+    function somarT() {
     
-
     
-
-
-
-
-
+}
+        
+    
 
 
 
